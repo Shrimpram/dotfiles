@@ -20,27 +20,6 @@ do
     esac
 done
 
-echo "Install plugins?"
-
-select yn2 in "Yes" "No"
-do
-    case $yn2 in
-        Yes )
-            echo "Installing plugins..."
-            n=$(command -v nvim | sed -e 's/\//\s /g' | awk '{print $NF}')
-            if [ "$n" = nvim ]
-            then
-                nvim --headless -c PackerCompile PackerUpdate q
-            else
-                echo "Error: Nvim not found. Installation cancelled." 1>&2
-            fi
-            break;;
-        No )
-            echo "Ok, moving on..."
-            break;;
-    esac
-done
-
 echo "Install dictionaries?"
 
 select dict in "Dwyl Dictionary" "Moby Thesaurus" "Both" "None"
