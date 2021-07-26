@@ -1,1 +1,3 @@
+nvim/.config/nvim/spell/*.txt
+
 brew/**/Brewfile.lock.json
