@@ -1,0 +1,5 @@
+brew "luarocks"
+brew "proselint"
+brew "shellcheck"
+brew "vint"
+brew "write-good"

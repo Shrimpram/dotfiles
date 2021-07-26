@@ -1,0 +1,177 @@
+{
+    "Template": {
+        "prefix": "template-writing",
+        "body": [
+            "\\documentclass[${1|letterpaper,a4paper|}]{${2|article,report|}}",
+            "",
+            "\\usepackage{amsmath, amssymb}",
+            "\\usepackage{csquotes}",
+            "\\usepackage{hyperref}",
+            "\\usepackage{hyphenat}",
+            "\\usepackage{microtype}",
+            "",
+            "\\usepackage{ragged2e}",
+            "\\raggedright{}",
+            "",
+            "\\usepackage{setspace}",
+            "${3|\\double,\\single|}spacing",
+            "",
+            "\\author{Shreeram Modi}",
+            "\\title{$4}",
+            "\\date{${5:\\today}}",
+            "",
+            "\\begin{document}",
+            "$0",
+            "\\end{document}"
+        ]
+    },
+    "Environment": {
+      "prefix": "beg",
+      "body": [
+        "\\begin{$1}",
+        "\t${0:$TM_SELECTED_TEXT}",
+        "\\end{$1}"
+      ]
+    },
+    "Align": {
+      "prefix": "ali",
+      "body": [
+        "\\begin{align}",
+        "\t${1:$TM_SELECTED_TEXT}",
+        "\\end{align}"
+      ]
+    },
+    "No Number Align": {
+      "prefix": "ali*",
+      "body": [
+        "\\begin{align*}",
+        "\t${1:$TM_SELECTED_TEXT}",
+        "\\end{align*}"
+      ]
+    },
+      "Definition": {
+          "prefix": "def",
+          "body": [
+        "\\begin{definition}[$1]",
+        "\t${2:$TM_SELECTED_TEXT}",
+        "\\end{definition}"
+          ]
+    },
+    "Fraction": {
+       "prefix": "/",
+       "body": "\\frac{${1:$TM_SELECTED_TEXT}}{$2}$0"
+    },
+    "Limit": {
+        "prefix": "lim",
+        "body": "\\lim_{${1|x,y,n|} \\to${2| \\infty, 0, c, |}}$0"
+    },
+    "Sum": {
+        "prefix": "sum",
+        "body": "\\sum_{${1|x,y,k|} =${2| k, \\infty, |}}^{${3|n,\\infty, |}}$0"
+    },
+    "Square Root": {
+        "prefix": "sr",
+        "body": "\\sqrt{${1:$TM_SELECTED_TEXT}}$0"
+    },
+    "Square": {
+        "prefix": "^",
+        "body": "^{${1:$TM_SELECTED_TEXT}}$0"
+    },
+    "Subscript": {
+        "prefix": "_",
+        "body": "_{${1:$TM_SELECTED_TEXT}}$0"
+    },
+    "Infinity": {
+        "prefix": "oo",
+        "body": "\\infty"
+    },
+    "Cdot": {
+        "prefix": "*",
+        "body": "\\cdot"
+    },
+    "Ldots": {
+        "prefix": "...",
+        "body": "\\ldots"
+    },
+    "Section": {
+        "prefix": "sec",
+        "body": [
+          "\\section{${1:$TM_SELECTED_TEXT}}",
+          "$0"
+        ]
+    },
+    "Subsection": {
+        "prefix": "ssec",
+        "body": [
+          "\\subsection{${1:$TM_SELECTED_TEXT}}",
+          "$0"
+        ]
+    },
+    "Subsubsection": {
+        "prefix": "sssec",
+        "body": [
+          "\\subsubsection{${1:$TM_SELECTED_TEXT}}",
+          "$0"
+        ]
+    },
+    "Textnormal": {
+        "prefix": "tn",
+        "body": "\\textnormal{${1:$TM_SELECTED_TEXT}}$0"
+    },
+    "right arrow": {
+        "prefix": "->",
+        "body": "\\rightarrow$0"
+    },
+    "Right Arrow": {
+        "prefix": "=>",
+        "body": "\\Rightarrow$0"
+    },
+    "left arrow": {
+        "prefix": "<-",
+        "body": "\\leftarrow$0"
+    },
+    "Left Arrow": {
+        "prefix": "<=",
+        "body": "\\Leftarrow$0"
+    },
+    "Table": {
+        "prefix": "table",
+        "body": [
+            "\\begin{table}[H]",
+            "\\centering",
+            "\\caption{$1}",
+            "\\begin{tabular}{$2}",
+            "$3",
+            "\\end{tabular}",
+            "\\end{table}"
+        ]
+    },
+    "Bold": {
+        "prefix": "bf",
+        "body": "\\textbf{${1:$TM_SELECTED_TEXT}}$0"
+    },
+    "Italics": {
+        "prefix": "it",
+        "body": "\\textit{${1:$TM_SELECTED_TEXT}}$0"
+    },
+    "Underline": {
+        "prefix": "ul",
+        "body": "\\underline{${1:$TM_SELECTED_TEXT}}$0"
+    },
+    "Paragraph": {
+        "prefix": "par",
+        "body": "\\paragraph{${1:$TM_SELECTED_TEXT}}$0"
+    },
+    "Textquote": {
+        "prefix": "tq",
+        "body": "\\textquote${1|[{,[,{|}$0"
+    },
+    "Enquote": {
+        "prefix": "eq",
+        "body": "\\enquote{${1:$TM_SELECTED_TEXT}}$0"
+    },
+    "Cite": {
+        "prefix": "ci",
+        "body": "\\cite[$1]{$2}$0"
+    }
+}
