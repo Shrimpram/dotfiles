@@ -1,0 +1,54 @@
+# Core
+
+brew "bat"
+brew "exa"
+brew "fd"
+brew "fzf"
+brew "gdu"
+brew "git-crypt"
+brew "git-lfs"
+brew "gnu-sed"
+brew "gnupg"
+brew "htop"
+brew "lazygit"
+brew "neofetch"
+brew "neovim"
+brew "nnn"
+brew "ripgrep"
+brew "stow"
+brew "tree"
+brew "wget"
+brew "zoxide"
+
+
+# Opt
+
+brew "buku"
+brew "haste-client"
+brew "hugo"
+brew "imagemagick"
+brew "moreutils"
+brew "poppler"
+brew "tesseract"
+brew "youtube-dl"
+
+
+# Lang
+
+brew "luarocks"
+brew "proselint"
+brew "shellcheck"
+brew "vint"
+brew "write-good"
+
+
+# Cask
+
+cask "discord"
+cask "dropbox"
+cask "emacs"
+cask "firefox"
+cask "raycast"
+cask "signal"
+cask "slack"
+cask "vscodium"
