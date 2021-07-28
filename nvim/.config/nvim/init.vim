@@ -92,10 +92,10 @@ vnoremap <silent> < <gv
 vnoremap <silent> > >gv
 
 " Make j and k move using visual lines instead of hard lines
-nnoremap <silent> j gj
-nnoremap <silent> k gk
-vnoremap <silent> j gj
-vnoremap <silent> k gk
+nnoremap <expr><silent> j v:count ? 'j' : 'gj'
+nnoremap <expr><silent> k v:count ? 'k' : 'gk'
+vnoremap <expr><silent> j v:count ? 'j' : 'gj'
+vnoremap <expr><silent> k v:count ? 'k' : 'gk'
 
 " Use arrow keys to resize splits
 lua << EOF
