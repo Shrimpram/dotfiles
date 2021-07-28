@@ -38,6 +38,7 @@ brew "youtube-dl"
 
 brew "luarocks"
 brew "proselint"
+brew "rust"
 brew "shellcheck"
 brew "vint"
 brew "write-good"
