@@ -133,7 +133,8 @@ return require('packer').startup(function()
 
   --- Org Mode
   use {
-    '$HOME/Documents/orgmode.nvim',
+    'kristijanhusak/orgmode.nvim',
+    requires = { 'nvim-lua/plenary.nvim', opt = true },
     config = [[require('config.orgmode')]]
   }
 
