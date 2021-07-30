@@ -65,4 +65,12 @@ do
     esac
 done
 
+if [ -e ~/.config/nvim/lua/plugins.lua ]
+then
+    echo "Setting up Nvim plugins..."
+    nvim --headless +PackerCompile +PackerSync +quitall
+else
+    echo "Nvim isn't stowed, please stow first" 1>&2
+fi
+
 echo "All done, nvim is now set up"
