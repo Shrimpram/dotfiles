@@ -1,17 +1,16 @@
 # My Dotfiles
-These are my dotfiles.
 
 ## Installation
 ### Setup
-1. `cd ~`
-2. git clone this repo
-3. `cd dotfiles`
-4. `./install`
+1. git clone this repo to `~/<somedir>`, e.g. `~/dotfiles`
+2. cd to the dotfiles directory
+3. Make sure you have [GNU Stow](https://www.gnu.org/software/stow/) installed
+4. Use `stow` to stow the modules you need. E.g. `stow nvim` will setup the nvim dotfiles
 
-### Nix
-1. Install [nix](https://nixos.org)
-2. Install [home manager](https://github.com/nix-community/home-manager)
-3. Run `home-manager switch`
+### Homebrew & Apps/CLI Utilities
+1. Install [Homebrew](https://brew.sh)
+2. stow the brew directory using `stow brew`
+3. `brew bundle --global`
 
 ### Nvim
-1. Run `./bootvim.sh`
+1. Run `bootvim.sh`
