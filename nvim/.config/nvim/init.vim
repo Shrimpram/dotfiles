@@ -62,10 +62,10 @@ lua require('utils')
 
 "{{{Lexical
 augroup lexical
-    autocmd!
-    autocmd FileType markdown,mkd call lexical#init()
-    autocmd FileType tex call lexical#init({ 'spell': 0 })
-    autocmd FileType text call lexical#init()
+  autocmd!
+  autocmd FileType markdown,mkd call lexical#init()
+  autocmd FileType tex call lexical#init({ 'spell': 0 })
+  autocmd FileType text call lexical#init()
 augroup END
 
 let g:lexical#thesaurus = ['~/.config/nvim/spell/moby-thesaurus.txt']
@@ -112,8 +112,8 @@ noremap <silent> <C-l> <C-w>l
 
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 augroup texclean
-    autocmd!
-    autocmd VimLeave *.tex silent !latexmk -c
+  autocmd!
+  autocmd VimLeave *.tex silent !latexmk -c
 augroup END
 
 " Quick way to switch between light and dark mode

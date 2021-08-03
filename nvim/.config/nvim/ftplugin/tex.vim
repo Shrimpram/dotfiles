@@ -5,7 +5,7 @@ let g:vimtex_compiler_latexmk_engines = {
     \}
 
 if os == 'Darwin'
-    let g:vimtex_view_general_viewer='open'
+  let g:vimtex_view_general_viewer='open'
 elseif os == 'Linux'
-    let g:vimtex_view_general_viewer='zathura'
+  let g:vimtex_view_general_viewer='zathura'
 endif
