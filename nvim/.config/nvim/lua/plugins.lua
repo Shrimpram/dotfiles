@@ -145,6 +145,11 @@ return require('packer').startup(function()
     keys = { '/', '?', ':', '*', '#', 'g*', 'g#' }
   }
 
+  use {
+    'PeterRincker/vim-searchlight',
+    event = 'VimEnter'
+  }
+
   --- Better movement
   use {
     'justinmk/vim-sneak',
