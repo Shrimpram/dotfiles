@@ -142,7 +142,7 @@ return require('packer').startup(function()
   use {
     'romainl/vim-cool',
     config = vim.cmd([[set hlsearch]]),
-    keys = { '/', '?', ':' }
+    keys = { '/', '?', ':', '*', '#', 'g*', 'g#' }
   }
 
   --- Better movement
