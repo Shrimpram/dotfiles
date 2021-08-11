@@ -1,6 +1,7 @@
 # Core
 
 brew "bat"
+brew "broot"
 brew "exa"
 brew "fd"
 brew "fzf"
@@ -54,6 +55,7 @@ cask "firefox"
 cask "flux"
 cask "iina"
 cask "kitty"
+cask "malwarebytes"
 cask "raycast"
 cask "signal"
 cask "slack"
