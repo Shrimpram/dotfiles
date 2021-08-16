@@ -27,7 +27,7 @@ set noshowmode
 set number relativenumber
 set ruler
 set scrolloff=3
-set tabstop=2 softtabstop=0 shiftwidth=2 expandtab
+set tabstop=8 shiftwidth=2 expandtab
 set termguicolors
 set timeoutlen=250
 set title
