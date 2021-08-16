@@ -1,7 +1,6 @@
 # Core
 
 brew "bat"
-brew "broot"
 brew "exa"
 brew "fd"
 brew "fzf"
@@ -18,6 +17,7 @@ brew "nnn"
 brew "pinentry-mac"
 brew "ripgrep"
 brew "stow"
+brew "trash"
 brew "tree"
 brew "wget"
 brew "zoxide"
