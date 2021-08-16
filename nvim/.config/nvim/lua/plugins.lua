@@ -49,9 +49,6 @@ return require('packer').startup(function()
 
   -- Text formatting
 
-  --- Editorconfig (line endings, spaces, etc)
-  use 'editorconfig/editorconfig-vim'
-
   --- Align
   use {
     {
