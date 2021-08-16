@@ -12,8 +12,8 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #}}}
 
-for f in $ZDOTDIR/rc/*.sh; do source $f; done
-for f in $ZDOTDIR/scripts/*.sh; do source $f; done
-for f in $ZDOTDIR/plugins/fzf-tab/*.zsh; do source $f; done
 for f in $ZDOTDIR/plugins/powerlevel10k/*.zsh-theme; do source $f; done
-for f in $ZDOTDIR/`uname`/zshrc*.sh; do source $f; done
+for f in "$ZDOTDIR"/rc/*.sh; do source $f; done
+for f in "$ZDOTDIR"/scripts/*.sh; do source $f; done
+for f in "$ZDOTDIR"/plugins/fzf-tab/*.zsh; do source $f; done
+for f in "$ZDOTDIR"/"$(uname)"/zshrc*.sh; do source $f; done
