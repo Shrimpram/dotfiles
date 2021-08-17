@@ -24,6 +24,7 @@ brew "neovim", args: ["HEAD"]
 brew "nnn"
 brew "pinentry-mac"
 brew "ripgrep"
+brew "romkatv/powerlevel10k/powerlevel10k"
 brew "stow"
 brew "trash"
 brew "tree"
