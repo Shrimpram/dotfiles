@@ -28,6 +28,7 @@ update:
 	cd ~/.config/zsh/plugins/fzf-tab && \
 		git fetch && \
 		git merge --no-ff
+	nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 
 
