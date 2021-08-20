@@ -1,4 +1,4 @@
-install: install-brew install-stow install-fzf-tab
+install: install-brew install-stow
 	stow -v kitty neofetch nix nvim zsh
 	stow -v --dotfiles brew git vim
 	brew bundle --global
@@ -13,24 +13,11 @@ ifeq (,$(wildcard /opt/homebrew/bin/stow))
 	brew install stow
 endif
 
-install-fzf-tab:
-ifeq (,$(wildcard ~/.config/zsh/plugins/fzf-tab))
-	git clone https://github.com/Aloxaf/fzf-tab.git ~/.config/zsh/plugins/fzf-tab
-endif
-
-
-
-
 
 update:
 	brew update
 	brew upgrade
-	cd ~/.config/zsh/plugins/fzf-tab && \
-		git fetch && \
-		git merge --no-ff
 	nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-
-
 
 
 nvim: nvim-packer nvim-dwyl-dict nvim-moby-thesaurus

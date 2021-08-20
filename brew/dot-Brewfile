@@ -13,6 +13,7 @@ brew "bat"
 brew "exa"
 brew "fd"
 brew "fzf"
+brew "fzf-tab", args: ["HEAD"]
 brew "gdu"
 brew "git-crypt"
 brew "git-lfs"
