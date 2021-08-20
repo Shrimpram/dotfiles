@@ -10,7 +10,6 @@ tap "shrimpram/tap"
 # Core
 
 brew "bat"
-brew "coreutils"
 brew "exa"
 brew "fd"
 brew "fzf"
@@ -32,6 +31,7 @@ brew "trash"
 brew "tree"
 brew "wget"
 brew "zoxide"
+brew "zsh"
 
 
 # Opt
