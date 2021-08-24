@@ -23,7 +23,8 @@ return require('packer').startup(function()
     {
       'lewis6991/gitsigns.nvim',
       requires = { 'nvim-lua/plenary.nvim', opt = true },
-      config = [[require('config.gitsigns')]]
+      config = [[require('config.gitsigns')]],
+      event = 'VimEnter',
     },
     {
       'TimUntersberger/neogit',
@@ -66,7 +67,10 @@ return require('packer').startup(function()
   }
 
   --- Commenting
-  use 'tpope/vim-commentary'
+  use {
+    'tpope/vim-commentary',
+    keys = { 'gcc', 'gc' },
+  }
 
 
   -- File Management
@@ -129,6 +133,7 @@ return require('packer').startup(function()
   use {
     'hrsh7th/nvim-compe',
     config = [[require('config.compe')]],
+    event = 'InsertEnter *',
   }
 
 
@@ -173,13 +178,15 @@ return require('packer').startup(function()
       require('hop').setup {
         keys = 'arstneiowfuy'
       }
-    end
+    end,
+    keys = { 's' },
   }
 
   --- Smooth scroll
   use {
     'karb94/neoscroll.nvim',
     config = [[require('neoscroll').setup{}]],
+    event = 'WinScrolled',
   }
 
   --- Statusline
@@ -247,34 +254,33 @@ return require('packer').startup(function()
     '$HOME/Documents/stella/vim-stella'
   }
 
-  use {
-    -- 'romainl/Apprentice',
-    -- 'ayu-theme/ayu-vim',
-    -- 'sjl/badwolf',
-    -- 'chriskempson/base16-vim',
-    -- 'reedes/vim-colors-pencil',
-    -- 'nightsense/cosmic_latte',
-    -- 'romainl/vim-dichromatic',
-    -- 'wadackel/vim-dogrun',
-    'romgrk/doom-one.vim',
-    -- 'sainnhe/everforest',
-    'fcpg/vim-fahrenheit',
-    'jaredgorski/fogbell.vim',
-    -- 'sainnhe/gruvbox-material',
-    -- 'lifepillar/vim-gruvbox8',
-    -- 'savq/melange',
-    -- 'arcticicestudio/nord-vim',
-    -- 'mhartington/oceanic-next',
-    -- 'joshdick/onedark.vim',
-    -- 'fcpg/vim-orbital',
-    -- 'drewtempelmeyer/palenight.vim',
-    -- 'tyrannicaltoucan/vim-quantum',
-    'lifepillar/vim-solarized8',
-    -- 'srcery-colors/srcery-vim',
-    -- 'nightsense/stellarized'
-
-    cmd = { 'Colorscheme', 'colorscheme' },
-  }
+  -- use {
+  --   -- 'romainl/Apprentice',
+  --   -- 'ayu-theme/ayu-vim',
+  --   -- 'sjl/badwolf',
+  --   -- 'chriskempson/base16-vim',
+  --   -- 'reedes/vim-colors-pencil',
+  --   -- 'nightsense/cosmic_latte',
+  --   -- 'romainl/vim-dichromatic',
+  --   -- 'wadackel/vim-dogrun',
+  --   'romgrk/doom-one.vim',
+  --   -- 'sainnhe/everforest',
+  --   'fcpg/vim-fahrenheit',
+  --   'jaredgorski/fogbell.vim',
+  --   -- 'sainnhe/gruvbox-material',
+  --   -- 'lifepillar/vim-gruvbox8',
+  --   -- 'savq/melange',
+  --   -- 'arcticicestudio/nord-vim',
+  --   -- 'mhartington/oceanic-next',
+  --   -- 'joshdick/onedark.vim',
+  --   -- 'fcpg/vim-orbital',
+  --   -- 'drewtempelmeyer/palenight.vim',
+  --   -- 'tyrannicaltoucan/vim-quantum',
+  --   'lifepillar/vim-solarized8',
+  --   -- 'srcery-colors/srcery-vim',
+  --   -- 'nightsense/stellarized',
+  --   cmd = { 'Colorscheme', 'colorscheme' },
+  -- }
 
 -- use { 'christoomey/vim-tmux-navigator' }
 -- use { 'RyanMillerC/better-vim-tmux-resizer' }
