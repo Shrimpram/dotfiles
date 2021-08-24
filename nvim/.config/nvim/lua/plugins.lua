@@ -53,7 +53,10 @@ return require('packer').startup(function()
   use {
     {
       'junegunn/vim-easy-align',
-      config = [[require('config.easy-align')]],
+      config = function()
+        vim.api.nvim_set_keymap( 'n', 'gl', [[<Plug>(EasyAlign)]], {} )
+        vim.api.nvim_set_keymap( 'x', 'gl', [[<Plug>(EasyAlign)]], {} )
+      end,
       keys = { 'gl' }
     },
     {
@@ -71,7 +74,10 @@ return require('packer').startup(function()
   --- Undo History
   use {
     'mbbill/undotree',
-    config = [[require('config.undotree')]],
+    config = function()
+      vim.api.nvim_set_keymap( 'n', '<leader>ut', [[<CMD>UndotreeToggle<CR>]], {noremap = true, silent = true} )
+      vim.g.undotree_SetFocusWhenToggle = '1'
+    end,
     keys = '<leader>ut',
     cmd = 'UndotreeToggle'
   }
@@ -132,7 +138,15 @@ return require('packer').startup(function()
   use {
     'kristijanhusak/orgmode.nvim',
     requires = { 'nvim-lua/plenary.nvim', opt = true },
-    config = [[require('config.orgmode')]]
+    config = function()
+      require('orgmode').setup{
+        org_agenda_files = '~/Dropbox/org/*',
+        org_default_notes_file = '~/Sync/org/inbox.org',
+        org_deadline_warning_days = 2,
+        org_use_tag_inheritance = true,
+        org_agenda_span = 'day',
+      }
+    end
   }
 
   --- Search
@@ -148,10 +162,18 @@ return require('packer').startup(function()
   }
 
   --- Better movement
+
   use {
-    'justinmk/vim-sneak',
-    config = [[require('config.sneak')]],
-    keys = { 's', 'S' }
+    'phaazon/hop.nvim',
+    config = function()
+      vim.api.nvim_set_keymap( 'n', 's', "<CMD>HopChar2<CR>", {noremap = true, silent = true} )
+      vim.api.nvim_set_keymap( 'v', 's', "<CMD>HopChar2<CR>", {noremap = true, silent = true} )
+      vim.api.nvim_set_keymap( 'x', 's', "<CMD>HopChar2<CR>", {noremap = true, silent = true} )
+      vim.api.nvim_set_keymap( 'o', 's', "<CMD>HopChar2<CR>", {noremap = true, silent = true} )
+      require('hop').setup {
+        keys = 'arstneiowfuy'
+      }
+    end
   }
 
   --- Smooth scroll
@@ -169,7 +191,14 @@ return require('packer').startup(function()
   --- Async building
   use {
     'neomake/neomake',
-    setup = [[require('config.neomake')]],
+    setup = function()
+      vim.g.neomake_verbose = 1
+      vim.g.neomake_open_list = 2
+      vim.api.nvim_set_keymap( 'n', ']c', [[<CMD>cnext<CR>]], {noremap = true, silent = true} )
+      vim.api.nvim_set_keymap( 'n', '[c', [[<CMD>cprev<CR>]], {noremap = true, silent = true} )
+      vim.api.nvim_set_keymap( 'n', ']l', [[<CMD>lnext<CR>]], {noremap = true, silent = true} )
+      vim.api.nvim_set_keymap( 'n', '[l', [[<CMD>lprev<CR>]], {noremap = true, silent = true} )
+    end,
     config = [[vim.cmd("call neomake#configure#automake('w')")]],
     event = 'BufWrite'
   }
