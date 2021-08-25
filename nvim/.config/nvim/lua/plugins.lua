@@ -158,7 +158,7 @@ return require('packer').startup(function()
   use {
     'romainl/vim-cool',
     config = vim.cmd([[set hlsearch]]),
-    keys = { '/', '?', ':', '*', '#', 'g*', 'g#' }
+    keys = { '/', '?', ':', '*', '#', 'g*', 'g#', 'n', 'N' }
   }
 
   use {
