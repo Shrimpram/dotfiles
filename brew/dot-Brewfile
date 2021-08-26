@@ -52,6 +52,7 @@ brew "youtube-dl"
 
 brew "luarocks"
 brew "proselint"
+brew "ruby"
 brew "rust"
 brew "shellcheck"
 brew "stylua"
