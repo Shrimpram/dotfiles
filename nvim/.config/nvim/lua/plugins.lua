@@ -33,10 +33,6 @@ return require('packer').startup(function()
       setup = map( 'n', '<leader>ng', [[<CMD>Neogit<CR>]], {noremap = true, silent = true} ),
       cmd = 'Neogit'
     },
-    {
-      'kdheepak/lazygit.nvim',
-      cmd = { 'LazyGit', 'LazyGitConfig', 'LazyGitFilter' }
-    }
   }
 
   -- Telescope
@@ -108,9 +104,6 @@ return require('packer').startup(function()
     cmd = 'UndotreeToggle'
   }
 
-  --- Diff swap files
-  -- use 'chrisbra/Recover.vim'
-
   --- File Tree (lua NERDTree)
   use {
     'kyazdani42/nvim-tree.lua',
@@ -135,16 +128,6 @@ return require('packer').startup(function()
   use 'preservim/vim-lexical'
 
   --- Snippets
-  -- use {
-  --   'SirVer/ultisnips',
-  --   config = [[
-  --   vim.g.UltiSnipsExpandTrigger = "<Tab>"
-  --   vim.g.UltiSnipsJumpForwardTrigger = "<C-l>"
-  --   vim.g.UltiSnipsJumpBackwardTrigger = "<C-j>"
-  --   ]],
-  --   ft = 'tex'
-  -- }
-
   use {
     'hrsh7th/vim-vsnip',
     ft = 'tex',
