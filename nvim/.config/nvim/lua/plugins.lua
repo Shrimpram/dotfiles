@@ -6,6 +6,11 @@ return require('packer').startup(function()
 
   use 'wbthomason/packer.nvim'
 
+  use {
+    'editorconfig/editorconfig-vim',
+    event = 'VimEnter',
+  }
+
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -70,18 +75,12 @@ return require('packer').startup(function()
 
   --- Align
   use {
-    {
-      'junegunn/vim-easy-align',
-      config = function()
-        vim.api.nvim_set_keymap( 'n', 'gl', [[<Plug>(EasyAlign)]], {} )
-        vim.api.nvim_set_keymap( 'x', 'gl', [[<Plug>(EasyAlign)]], {} )
-      end,
-      keys = { 'gl' }
-    },
-    {
-      'dhruvasagar/vim-table-mode',
-      keys = { '<leader>tm', '<leader>tt' }
-    }
+    'junegunn/vim-easy-align',
+    config = function()
+      vim.api.nvim_set_keymap( 'n', 'gl', [[<Plug>(EasyAlign)]], {} )
+      vim.api.nvim_set_keymap( 'x', 'gl', [[<Plug>(EasyAlign)]], {} )
+    end,
+    keys = { 'gl' }
   }
 
   --- Commenting
