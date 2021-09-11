@@ -12,7 +12,6 @@ set backspace=eol,start,indent
 set cmdheight=1
 set conceallevel=0
 set encoding=UTF-8
-set expandtab
 set foldmethod=marker foldlevel=0
 set hidden
 set ignorecase smartcase
