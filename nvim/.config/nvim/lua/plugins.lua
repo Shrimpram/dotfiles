@@ -48,29 +48,6 @@ return require('packer').startup(function()
     config = [[require('config.telescope')]]
   }
 
-  use {
-    "AckslD/nvim-neoclip.lua",
-    config = function()
-      require('neoclip').setup({
-      default_register = '+',
-        keys = {
-          i = {
-            select = '<cr>',
-            paste = '<nil>',
-            paste_behind = '<nil>',
-          },
-          n = {
-            select = '<cr>',
-            paste = '<nil>',
-            paste_behind = '<nil>',
-          }
-        }
-      })
-      vim.api.nvim_set_keymap( 'n', [[""]], [[<CMD>lua require('telescope').extensions.neoclip.default()<CR>]], {noremap = true, silent = true} )
-      vim.api.nvim_set_keymap( 'i', [[<C-r><C-r>]], [[<CMD>lua require('telescope').extensions.neoclip.default()<CR>]], {noremap = true, silent = true} )
-    end,
-  }
-
   -- Text formatting
 
   --- Align
