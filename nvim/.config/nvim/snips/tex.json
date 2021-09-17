@@ -124,7 +124,7 @@
     },
     "Right Arrow": {
         "prefix": "=>",
-        "body": "\\Rightarrow$0"
+        "body": "\\implies$0"
     },
     "left arrow": {
         "prefix": "<-",
@@ -132,7 +132,7 @@
     },
     "Left Arrow": {
         "prefix": "<=",
-        "body": "\\Leftarrow$0"
+        "body": "\\impliedby$0"
     },
     "Table": {
         "prefix": "table",
