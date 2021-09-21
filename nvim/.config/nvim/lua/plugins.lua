@@ -100,9 +100,6 @@ return require('packer').startup(function()
     keys = { 'sa', 'sd', 'sr' }
   }
 
-  --- Better spellcheck & thesaurus (use with dwyl dictionary and moby thesaurus)
-  use 'preservim/vim-lexical'
-
   --- Snippets
   use {
     'hrsh7th/vim-vsnip',
