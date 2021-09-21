@@ -173,5 +173,13 @@
     "Cite": {
         "prefix": "ci",
         "body": "\\cite[$1]{$2}$0"
+    },
+    "normalcdf": {
+      "prefix": "cdf",
+      "body": "\\texttt{normalcdf($1,$2,$3,$4)}$0"
+    },
+    "invNorm": {
+      "prefix": "inv",
+      "body": "\\texttt{invNorm($1,$2,$3,${4|LEFT,CENTER,RIGHT|})}$0"
     }
 }
