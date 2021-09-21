@@ -130,3 +130,5 @@ function! SynStack()
 endfunc
 
 nnoremap <silent> <F9> <CMD>call SynStack()<CR>
+
+au TextYankPost * silent! lua vim.highlight.on_yank()
