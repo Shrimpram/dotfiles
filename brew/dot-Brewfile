@@ -63,6 +63,7 @@ brew "write-good"
 
 # Cask
 
+cask "anki"
 cask "appcleaner"
 cask "authy"
 cask "bitwarden"
